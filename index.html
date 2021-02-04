@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>&#x1F34C;Экзотические фрукты</title>
+  </head>
+
+  <body>
+    <main>
+      <!-- ПАНЕЛЬ УПРАВЛЕНИЯ -->
+      <section class="panel__wrapper">
+        <h2 class="wrapper__title">⚙️ Панель управления</h2>
+
+        <div class="panel__devtools">
+          <!-- TODO: при нажатии элементы массива перемешиваются в случайном порядке -->
+          <button class="shuffle__btn line" id="mix"><img src="img/mix3.png" alt="" style="vertical-align:middle" width="20" height="20"> Перемешать</button>
+
+          <div class="line">
+            <!-- пользователь указывает нижнюю границу weight -->
+            <div>Min weight (минимальный вес):</div>
+            <input class="minweight__input" / value="1">
+          </div>
+
+          <div class="line">
+            <!-- пользователь указывает верхнюю границу weight -->
+            <div>Max weight (максимальный вес):</div>
+            <input class="maxweight__input" / value="5">
+          </div>
+
+          <!-- TODO: при нажатии элементы массива фильтруются в пределах [minweight, maxweight] -->
+          <button class="filter__btn line">Фильтровать</button>
+
+          <div class="line">
+            <span>Алгоритм сортировки:</span>
+            <!-- TODO: указывается название алгоритма сортировки -->
+            <span class="sort__kind"></span>
+          </div>
+
+          <div class="line">
+            <span>Время сортировки: </span>
+            <!-- TODO: выводится время сортировки -->
+            <span class="sort__time"></span>
+          </div>
+
+          <!-- TODO: при нажатии происходит смена алгоритма сортировки -->
+          <button class="sort__change__btn line">Сменить алгоритм сортировки</button>
+
+          <!-- TODO: при нажатии происходит сортировка и рассчет времени сортировки -->
+          <button class="sort__action__btn line">Сортировать</button>
+
+          <!-- пользователь указывает значения характеристик будущего фрукта -->
+          <div class="line">
+            <div>Kind (название фрукта):</div>
+            <input class="kind__input" />
+          </div>
+
+          <div class="line">
+            <div>Color (цвет):</div>
+            <!-- <input class="color__input" /> -->
+            <select class="color__input">
+              <option value="фиолетовый" class="fruit_violet">фиолетовый</option>
+              <option value="зеленый" class="fruit_green">зеленый</option>
+              <option value="розово-красный" class="fruit_carmazin">розово-красный</option>
+              <option value="желтый" class="fruit_yellow">желтый</option>
+              <option value="светло-коричневый" class="fruit_lightbrown">светло-коричневый</option>
+            </select>
+          </div>
+
+          <div class="line">
+            <div>Weight (вес):</div>
+            <input class="weight__input" />
+          </div>
+
+          <!-- TODO: при нажатии новый фрукт добавляется в конец списка -->
+          <button class="add__action__btn line">Добавить фрукт</button>
+        </div>
+      </section>
+
+      <!-- СПИСОК ЭКЗОТИЧЕСКИХ ФРУКТОВ -->
+      <section class="fruits__wrapper">
+        <figure class="fig">
+          <img src="img/exfruits.png" width="320" height="179" alt="СПИСОК ЭКЗОТИЧЕСКИХ ФРУКТОВ">
+          <figcaption>
+          </figcaption>
+        </figure>
+        
+        <h2 class="wrapper__title">Список экзотических фруктов</h2>
+        <!-- TODO: формировать список динамически (то есть закоментированный код удалить) -->
+        <ul class="fruits__list">
+          <!-- <li class="fruit__item fruit_violet">
+            <div class="fruit__info">
+              <div>index: 0</div>
+              <div>kind: Мангустин</div>
+              <div>color: фиолетовый</div>
+              <div>weight (кг): 13</div>
+            </div>
+          </li>
+          <li class="fruit__item fruit_green">
+            <div class="fruit__info">
+              <div>index: 1</div>
+              <div>kind: Дуриан</div>
+              <div>color: зеленый</div>
+              <div>weight (кг): 35</div>
+            </div>
+          </li>
+          <li class="fruit__item fruit_carmazin">
+            <div class="fruit__info">
+              <div>index: 2</div>
+              <div>kind: Личи</div>
+              <div>color: розово-красный</div>
+              <div>weight (кг): 17</div>
+            </div>
+          </li>
+          <li class="fruit__item fruit_yellow">
+            <div class="fruit__info">
+              <div>index: 3</div>
+              <div>kind: Карамбола</div>
+              <div>color: Желтый</div>
+              <div>weight (кг): 28</div>
+            </div>
+          </li>
+          <li class="fruit__item fruit_lightbrown">
+            <div class="fruit__info">
+              <div>index: 4</div>
+              <div>kind: Тамаринд</div>
+              <div>color: светло-коричневый</div>
+              <div>weight (кг): 22</div>
+            </div>
+          </li> -->
+        </ul>
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
