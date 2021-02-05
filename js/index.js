@@ -13,6 +13,7 @@ const addActionButton = document.querySelector('.add__action__btn'); // кноп
 // VAL добавляем
 const minWeight = document.querySelector('.minweight__input'); //поле с минимальным весом
 const maxWeight = document.querySelector('.maxweight__input'); //поле с максимальным весом
+const warningWrapper = document.querySelector('.warning'); //область предупреждений
 
 
 // список фруктов в JSON формате
@@ -26,6 +27,16 @@ let fruitsJSON = `[
 
 // преобразование JSON в объект JavaScript
 let fruits = JSON.parse(fruitsJSON);
+
+/*** ПРЕДУПРЕЖДЕНИЕ ***/
+
+const warning = (text) =>{
+  warningWrapper.innerText = text;
+  warningWrapper.classList.add('warning__active');
+  setTimeout(() => {
+    warningWrapper.classList.remove('warning__active');
+  }, 1500);
+}
 
 /*** ОТОБРАЖЕНИЕ ***/
 
@@ -255,7 +266,7 @@ addActionButton.addEventListener('click', () => {
 
   //( VAL дописываем действие кнопки addCard (добавить фрукт)
   if ((kindInput.value == "") || (weightInput.value == "")){
-    warning('Заполните поля kind и weight');
+    warning('Заполните пожалуйста поля Наименование фрукта, вес и выбирете цвет');
     return false;
   }
 
