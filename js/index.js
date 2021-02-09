@@ -51,6 +51,20 @@ function colorToClass(color) {
   }
 }
 
+// оптимальнее заменить на такую:
+
+// function colorToClass(color) {
+// const colorAssociation = {
+// 'фиолетовый':'fruit_violet',
+// 'зеленый':'fruit_green',
+// 'розово-красный':'fruit_carmazin',
+// 'желтый':'fruit_yellow',
+// 'светло-коричневый':'fruit_lightbrown'
+// }
+// return (colorAssociation[color]) ? colorAssociation[color] : 'default_color'
+// }
+// Так мы избежим многократного повторения кода и сделаем код лаконичнее, к тому же введем дефолтное значение.
+
 // отрисовка карточек
 const display = () => {
   // TODO: очищаем fruitsList от вложенных элементов,
